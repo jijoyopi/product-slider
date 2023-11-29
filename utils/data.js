@@ -62,13 +62,13 @@ export const CardData = [
     image_url:
       "https://res.cloudinary.com/dcgbzqanx/image/upload/v1701239976/Permian/shoes_enaoae.png",
   },
-  {
-    id: 8,
-    name: "NIKE DUNK LOW RETRO",
-    price: "200",
-    description: `Recognising the Dunks roots as the top-ranking university-team
-    sneaker, the Be True To Your School Pack`,
-    image_url:
-      "https://res.cloudinary.com/dcgbzqanx/image/upload/v1701239976/Permian/shoes_enaoae.png",
-  },
+  // {
+  //   id: 8,
+  //   name: "NIKE DUNK LOW RETRO",
+  //   price: "200",
+  //   description: `Recognising the Dunks roots as the top-ranking university-team
+  //   sneaker, the Be True To Your School Pack`,
+  //   image_url:
+  //     "https://res.cloudinary.com/dcgbzqanx/image/upload/v1701239976/Permian/shoes_enaoae.png",
+  // },
 ];
