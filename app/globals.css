@@ -1,27 +1,291 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+ 
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+ 
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+ 
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+ 
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+ 
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+ 
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+ 
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+ 
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+ 
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+ 
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+ 
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card {
+ border: 1px solid #454545;
+}
+
+
+.swiper-slide-active {
+  /* top: 2.5%; */
+  /* left: 8.5%; */
+}
+
+.container {
+  width: 100rem;
+  padding: 4rem 1rem;
+  margin: 0 auto;
+}
+
+.swiper_container {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  position: relative;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.slider-controler .swiper-button-next {
+  left: 59% !important;
+  transform: translateX(-59%) !important;
+}
+
+
+.gradient-div {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(to right, #36C3E0, #ffffff); /* You can adjust the direction and additional color stops as needed */
+}
+
+@media (max-width: 1400px) and (min-width: 1201px) {
+  .container {
+    width: 84rem;
+    padding: 4rem 1rem;
+    margin: 0 0 auto -2rem;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 42% !important;
+    transform: translateX(-42%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 60% !important;
+    transform: translateX(-60%) !important;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 991px) {
+  .container {
+    width: 68rem;
+    padding: 4rem 1rem;
+    margin: 0 0 auto -2rem;
+  }
+
+  .swiper-slide {
+    left: 1.25%;
+  }
+
+
+  .slider-controler .swiper-button-prev {
+    left: 44% !important;
+    transform: translateX(-44%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 65% !important;
+    transform: translateX(-65%) !important;
+  }
+}
+
+@media (max-width: 990px) and (min-width: 767px) {
+  .swiper-wrapper {
+    left: 0% !important;
+  }
+
+  .container {
+    width: 48rem;
+    padding: 4rem 1rem;
+    margin: 0 0 auto -2rem;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 45% !important;
+    transform: translateX(-45%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 78% !important;
+    transform: translateX(-78%) !important;
+  }
+}
+
+@media (max-width: 766px) and (min-width: 578px)  {
+  .container {
+    width: 49rem;
+    padding: 4rem 1rem;
+    margin: 0 0 auto -1rem;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 36% !important;
+    transform: translateX(-36%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 68% !important;
+    transform: translateX(-68%) !important;
+  }
+}
+
+@media (max-width: 577px) and (min-width: 421px)  {
+  .swiper-slide {
+    left: 8.25%;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 9% !important;
+    transform: translateX(-9%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 25% !important;
+    transform: translateX(-25%) !important;
+  }
+}
+
+@media (max-width: 420px) and (min-width: 382px) {
+
+  .swiper-slide {
+    left: 2.25%;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 2.5% !important;
+    transform: translateX(-2.5%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 18% !important;
+    transform: translateX(-18%) !important;
+  }
+}
+
+@media (max-width: 381px) and (min-width: 355px) {
+
+  .swiper-slide {
+    left: 1.25%;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 2% !important;
+    transform: translateX(-2%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 17% !important;
+    transform: translateX(-17%) !important;
+  }
+}
+
+
+@media (max-width: 354px) {
+
+  .swiper-slide {
+    left: .25%;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 1% !important;
+    transform: translateX(-1%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 16% !important;
+    transform: translateX(-16%) !important;
+  }
+}
+
+
+.slider-controler .slider-arrow {
+  background: var(--white);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.slider-controler .slider-arrow::after {
+  content: '';
 }
