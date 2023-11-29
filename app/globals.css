@@ -80,11 +80,6 @@
 }
 
 
-.swiper-slide-active {
-  /* top: 2.5%; */
-  /* left: 8.5%; */
-}
-
 .container {
   width: 100rem;
   padding: 4rem 1rem;
@@ -119,12 +114,6 @@
   transform: translateX(-59%) !important;
 }
 
-
-.gradient-div {
-  width: 300px;
-  height: 200px;
-  background: linear-gradient(to right, #36C3E0, #ffffff); /* You can adjust the direction and additional color stops as needed */
-}
 
 @media (max-width: 1400px) and (min-width: 1201px) {
   .container {
@@ -189,21 +178,39 @@
   }
 }
 
-@media (max-width: 766px) and (min-width: 578px)  {
+@media (max-width: 766px) and (min-width: 678px)  {
   .container {
-    width: 49rem;
+    width: 39rem;
     padding: 4rem 1rem;
-    margin: 0 0 auto -1rem;
+    margin: 0 0 auto 2.4rem;
   }
 
   .slider-controler .swiper-button-prev {
-    left: 36% !important;
+    left: 37% !important;
     transform: translateX(-36%) !important;
   }
 
   .slider-controler .swiper-button-next {
-    left: 68% !important;
-    transform: translateX(-68%) !important;
+    left: 78% !important;
+    transform: translateX(-78%) !important;
+  }
+}
+
+@media (max-width: 677px) and (min-width: 578px)  {
+  .container {
+    width: 39rem;
+    padding: 4rem 1rem;
+    margin: 0 0 auto -0.9rem;
+  }
+
+  .slider-controler .swiper-button-prev {
+    left: 37% !important;
+    transform: translateX(-36%) !important;
+  }
+
+  .slider-controler .swiper-button-next {
+    left: 78% !important;
+    transform: translateX(-78%) !important;
   }
 }
 
@@ -265,6 +272,7 @@
   .slider-controler .swiper-button-prev {
     left: 2% !important;
     transform: translateX(-2%) !important;
+    top: 0% important;
   }
 
   .slider-controler .swiper-button-next {
@@ -305,3 +313,5 @@
 .slider-controler .slider-arrow::after {
   content: '';
 }
+
+

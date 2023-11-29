@@ -24,11 +24,17 @@ const Card = ({ name, price, description, image_url }) => {
       </div>
       <div className="img-content">
         <div className="flex justify-between mb-4">
-          <h3 className="text-sm font-semibold">{name}</h3>
-          <p className="text-sm font-semibold">${price}</p>
+          <h3 className="text-[#36C3E0] text-sm font-semibold transform transition-transform hover:scale-105">
+            {name}
+          </h3>
+          <p className="text-sm font-semibold transform transition-transform hover:scale-105">
+            ${price}
+          </p>
         </div>
         <div>
-          <p className="text-sm font-normal leading-relaxed">{description}</p>
+          <p className="text-sm font-normal leading-relaxed transform transition-transform hover:scale-105">
+            {description}
+          </p>
         </div>
       </div>
     </div>
