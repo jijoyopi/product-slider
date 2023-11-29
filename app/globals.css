@@ -128,8 +128,8 @@
   }
 
   .slider-controler .swiper-button-next {
-    left: 60% !important;
-    transform: translateX(-60%) !important;
+    left: 59.5% !important;
+    transform: translateX(-59.5%) !important;
   }
 }
 
